@@ -1,7 +1,7 @@
 import { Calendar, Pill, Video, Bell, Users } from 'lucide-react';
 
 const FeatureItem = ({ icon: Icon, title, desc, benefit }) => (
-  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+  <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
     <div className="flex items-center gap-2">
       <div className="flex h-9 w-9 items-center justify-center rounded-md bg-blue-600/10 text-blue-700">
         <Icon className="h-5 w-5" />
@@ -15,13 +15,14 @@ const FeatureItem = ({ icon: Icon, title, desc, benefit }) => (
 
 export default function FeatureColumns() {
   return (
-    <section className="mx-auto max-w-6xl px-6">
-      <h2 className="text-2xl font-bold text-slate-900">Core Feature Set by Role</h2>
-      <p className="mt-1 text-slate-600">
+    <section id="features" className="relative mx-auto max-w-6xl px-6">
+      <div className="pointer-events-none absolute -inset-x-10 -top-8 h-32 bg-gradient-to-b from-violet-100/70 to-transparent" />
+      <h2 className="text-3xl font-bold tracking-tight text-slate-900">Core Feature Set by Role</h2>
+      <p className="mt-2 text-slate-600">
         Focused on appointment scheduling with reminders, prescription management and refills, and telemedicine booking.
       </p>
 
-      <div className="mt-6 grid gap-6 md:grid-cols-3">
+      <div className="mt-8 grid gap-6 md:grid-cols-3">
         {/* Patients */}
         <div>
           <div className="mb-3 flex items-center gap-2">
